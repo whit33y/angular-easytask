@@ -1,0 +1,22 @@
+.users-container {
+  height: 80dvh;
+  margin-left: 1rem;
+  overflow-x: scroll;
+  padding-right: 0.1rem;
+  margin-top: 10px;
+}
+
+.users-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.users-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.users-container::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}

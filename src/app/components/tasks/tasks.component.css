@@ -1,0 +1,53 @@
+.tasks-container {
+  min-width: 100%;
+  padding-left: 10px;
+}
+
+.tasks-container h1 {
+  color: #a49f98;
+}
+
+.task-container-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-container-top .task-add {
+  height: 40px;
+  width: 40px;
+}
+
+.task-container-top-add {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 5px 20px;
+  margin-right: 15px;
+  color: white;
+  background-color: #087fe7;
+  border-radius: 2rem;
+}
+
+.task-container-top-add:hover {
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #a49f98;
+  width: 14rem;
+  padding: 10px;
+  border-radius: 0.25rem;
+  margin-bottom: 5px;
+}
+
+.task p {
+  margin: 0;
+  padding: 0;
+}
+
+.task .task-delete:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+.user-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #0582ff;
+  margin: 0.3rem 0rem;
+  padding-left: 0.1rem;
+  border-radius: 0.5rem;
+  color: #ebf5fe;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.user-container:hover {
+  background-color: #045ac3;
+  cursor: pointer;
+}
+
+.user-container img {
+  height: 2.8rem;
+  border-radius: 5rem;
+  margin-right: 0.5rem;
+}

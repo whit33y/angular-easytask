@@ -1,0 +1,5 @@
+<div class="users-container">
+    @for(user of users; track user.id){
+    <app-user [name]="user.name" [avatar]="user.avatar" [id]="user.id" />
+    }
+</div>
