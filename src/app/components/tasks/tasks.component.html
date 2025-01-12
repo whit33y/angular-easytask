@@ -2,18 +2,41 @@
     @if(selectedUser.userName){
     <div class="task-container-top">
         <div>
-            <h1>{{selectedUser.userName}} tasks: </h1>
+            <h1 [ngClass]="addTaskStatus ? 'none' : 'transparent'">{{selectedUser.userName}} tasks: </h1>
         </div>
-        <div class="task-container-top-add">
-            Add task
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="task-add">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
-                <path d="M10 14h4" />
-                <path d="M12 12v4" />
-            </svg>
+        @if(!addTaskStatus){
+        <div class="task-container-top-form">
+            <label for="task">Add task: </label>
+            <input type="text" name="task" [formControl]="taskData" placeholder="Task name...">
+        </div>
+        }
+        <div class="task-container-buttons">
+            @if(!addTaskStatus){
+            <div class="task-container-top-show" (click)="saveTask()">
+                <p>Save</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="task-add">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                    <path d="M10 14h4" />
+                    <path d="M12 12v4" />
+                </svg>
+            </div>
+            }
+            <div class="task-container-top-show" [ngClass]="addTaskStatus ? 'blue' : 'red'" (click)="addTask()">
+                <p> @if(addTaskStatus){Add task}@else{Close}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="task-add">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                    <path d="M10 14h4" />
+                    <path d="M12 12v4" />
+                </svg>
+            </div>
         </div>
     </div>
     }@else {
