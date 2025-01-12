@@ -1,0 +1,18 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #a49f98;
+  width: 14rem;
+  padding: 10px;
+  border-radius: 0.25rem;
+  margin-bottom: 5px;
+}
+
+.task p {
+  margin: 0;
+  padding: 0;
+}
+
+.task .task-delete:hover {
+  cursor: pointer;
+}
