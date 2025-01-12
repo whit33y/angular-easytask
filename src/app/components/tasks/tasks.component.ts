@@ -40,7 +40,6 @@ export class TasksComponent {
 
   addTask() {
     this.addTaskStatus = !this.addTaskStatus;
-    console.log(this.addTaskStatus);
     this.addTaskError = false;
   }
 

@@ -5,6 +5,8 @@
 
 .tasks-container h1 {
   color: #a49f98;
+  padding: 0;
+  margin: 0;
 }
 
 .task-container-top {
@@ -29,6 +31,7 @@
   border-radius: 2rem;
   width: 9rem;
   height: 2rem;
+  margin-top: 5px;
 }
 
 .task-container-top-show {
@@ -57,6 +60,7 @@
   border-radius: 1rem;
   border: 1px solid #a49f98;
   width: 9rem;
+  margin-top: 5px;
 }
 
 .task-container-top-form-error p {
