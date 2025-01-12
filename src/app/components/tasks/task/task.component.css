@@ -1,11 +1,19 @@
 .task {
   display: flex;
   justify-content: space-between;
-  background-color: #a49f98;
   width: 14rem;
   padding: 10px;
   border-radius: 0.25rem;
   margin-bottom: 5px;
+}
+
+.grey {
+  background-color: #a49f98;
+}
+
+.green {
+  background-color: rgb(117, 187, 13);
+  margin-right: 10px;
 }
 
 .task p {
@@ -13,6 +21,22 @@
   padding: 0;
 }
 
+.task-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.task .task-check {
+  background-color: rgb(117, 187, 13, 0.2);
+  color: rgb(117, 187, 13);
+  border-radius: 10rem;
+  border: 1px solid rgb(117, 187, 13);
+}
+
 .task .task-delete:hover {
+  cursor: pointer;
+}
+
+.task .task-check:hover {
   cursor: pointer;
 }
