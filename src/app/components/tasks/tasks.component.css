@@ -75,3 +75,9 @@
 .red {
   background-color: red;
 }
+
+.tasks-render {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+}

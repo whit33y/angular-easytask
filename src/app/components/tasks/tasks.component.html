@@ -53,10 +53,24 @@
             </div>
         </div>
     </div>
+    <div class="tasks-render">
+        <div>
+            @for(task of userTasks; track $index){
+            @if(!task.status){
+            <app-task [task]="task.task" [id]="task.id" [status]="task.status" />
+            }
+            }
+        </div>
+        <div>
+            @for(task of userTasks; track $index){
+            @if(task.status){
+            <app-task [task]="task.task" [id]="task.id" [status]="task.status" />
+            }
+            }
+        </div>
+    </div>
     }@else {
     <h1>Select user to view tasks!</h1>
     }
-    @for(task of userTasks; track $index){
-    <app-task [task]="task.task" />
-    }
+
 </div>

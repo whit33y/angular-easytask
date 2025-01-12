@@ -49,7 +49,8 @@ export class TasksComponent {
       this.taskService.addTask(
         this.allTasks!.length + 1,
         this.selectedUser.userId,
-        task
+        task,
+        false
       );
       this.addTaskError = false;
     } else {
