@@ -2,7 +2,7 @@
     @if(selectedUser.userName){
     <div class="task-container-top">
         <div>
-            <h1 [ngClass]="addTaskStatus ? 'none' : 'transparent'">{{selectedUser.userName}} tasks: </h1>
+            <h1 [ngClass]="addTaskStatus ? 'none' : 'transparent'">{{selectedUser.userName}} tasks </h1>
         </div>
         @if(!addTaskStatus){
         <div class="task-container-top-form">
@@ -54,14 +54,16 @@
         </div>
     </div>
     <div class="tasks-render">
-        <div>
+        <div class="tasks-for">
+            <p>To do:</p>
             @for(task of userTasks; track $index){
             @if(!task.status){
             <app-task [task]="task.task" [id]="task.id" [status]="task.status" />
             }
             }
         </div>
-        <div>
+        <div class="tasks-for">
+            <p>Done:</p>
             @for(task of userTasks; track $index){
             @if(task.status){
             <app-task [task]="task.task" [id]="task.id" [status]="task.status" />
